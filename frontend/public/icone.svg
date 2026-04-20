@@ -1,0 +1,16 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Diamond icon -->
+  <polygon points="55,10 100,60 55,110 10,60" fill="#113e0e"/>
+  <polygon points="55,10 100,60 55,42" fill="#1d4a1b"/>
+  <polygon points="55,10 10,60 55,42" fill="#6ddb8c"/>
+  <polygon points="10,60 55,110 55,78" fill="#1d4a1b"/>
+  <polygon points="100,60 55,110 55,78" fill="#1d4a1b"/>
+  <polygon points="55,42 100,60 55,78 10,60" fill="#113e0e"/>
+  <polygon points="22,38 36,28 42,44 28,52" fill="white" opacity="0.12"/>
+ 
+  <!-- Wordmark -->
+  <text x="120" y="72" font-family="sans-serif" font-weight="700" font-size="48px" fill="#20201d">Factur</text>
+  <text x="275" y="72" font-family="sans-serif" font-weight="700" font-size="48px" fill="#0e6408">ly</text>
+
+</svg>
