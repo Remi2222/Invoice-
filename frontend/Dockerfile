@@ -10,12 +10,9 @@ RUN npm run build
 
 FROM nginx:alpine AS runner
 
-WORKDIR /app
+COPY --from=builder /app/dist /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/templates/default.conf.template
 
-RUN npm install -g serve
+EXPOSE 80
 
-COPY --from=builder /app/dist ./dist
-
-ENV PORT=3000
-
-CMD ["serve", "-s", "dist", "-l", "3000"]
+CMD ["nginx", "-g", "daemon off;"]
