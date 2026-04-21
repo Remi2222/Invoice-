@@ -8,7 +8,8 @@ RUN npm ci
 
 COPY prisma ./prisma
 
-RUN npx prisma generate --schema=prisma/schema.prisma
+ARG DATABASE_URL
+RUN DATABASE_URL=${DATABASE_URL} npx prisma generate --schema=prisma/schema.prisma
 
 COPY . .
 
