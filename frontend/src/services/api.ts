@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://facturlybackend.up.railway.app/',
+  baseURL: import.meta.env.VITE_API_URL || 'https://facturlybackend.up.railway.app/',
 });
 
 api.interceptors.request.use((config) => {
