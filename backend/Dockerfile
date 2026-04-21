@@ -12,7 +12,7 @@ RUN npx prisma generate --schema=prisma/schema.prisma
 
 RUN npm run build
 
-RUN cp -r generated dist/generated
+RUN mkdir -p dist/generated && cp -r generated/prisma dist/generated/prisma
 
 EXPOSE 3000
 
