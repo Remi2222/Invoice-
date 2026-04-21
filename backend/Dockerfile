@@ -12,7 +12,8 @@ RUN npx prisma generate --schema=prisma/schema.prisma
 
 RUN npm run build
 
+RUN cp -r generated dist/generated
+
 EXPOSE 3000
 
 CMD ["npm", "run", "start:prod"]
-# force cache bust 20260421232351
