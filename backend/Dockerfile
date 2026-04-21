@@ -6,12 +6,9 @@ COPY package*.json ./
 
 RUN npm ci
 
-COPY prisma ./prisma
-
 COPY . .
 
-ARG DATABASE_URL
-RUN DATABASE_URL=${DATABASE_URL} npx prisma generate --schema=prisma/schema.prisma
+RUN npx prisma generate --schema=prisma/schema.prisma
 
 RUN npm run build
 
