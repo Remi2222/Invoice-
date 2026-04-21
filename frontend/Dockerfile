@@ -15,11 +15,7 @@ WORKDIR /app
 RUN npm install -g serve
 
 COPY --from=builder /app/dist ./dist
-COPY entrypoint.sh ./
-RUN chmod +x ./entrypoint.sh
 
 EXPOSE 3000
 
-ENV PORT=3000
-
-CMD ["./entrypoint.sh"]
+CMD ["sh", "-c", "serve -s dist -l 0.0.0.0:${PORT:-3000}"]
