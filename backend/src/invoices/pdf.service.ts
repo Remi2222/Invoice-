@@ -4,9 +4,12 @@ import puppeteer from 'puppeteer';
 @Injectable()
 export class PdfService {
   async generateInvoicePdf(invoice: any): Promise<Buffer> {
-    const browser = await puppeteer.launch({ args: ['--no-sandbox'] });
+    const browser = await puppeteer.launch({
+      executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
+      args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-gpu'],
+      headless: true,
+    });
     const page = await browser.newPage();
-
     const html = `
     <!DOCTYPE html>
     <html>
