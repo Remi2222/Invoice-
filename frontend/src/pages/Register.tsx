@@ -105,6 +105,8 @@ export default function Register() {
                 required
               >
                 <option value="">Sélectionnez un pays</option>
+
+                {/* Europe */}
                 <option value="FR">France</option>
                 <option value="BE">Belgique</option>
                 <option value="CH">Suisse</option>
@@ -125,16 +127,71 @@ export default function Register() {
                 <option value="GR">Grèce</option>
                 <option value="PT">Portugal</option>
                 <option value="IE">Irlande</option>
+                <option value="RO">Roumanie</option>
+                <option value="HU">Hongrie</option>
+                <option value="SK">Slovaquie</option>
+                <option value="HR">Croatie</option>
+                <option value="LU">Luxembourg</option>
+
+                {/* Océanie */}
                 <option value="AU">Australie</option>
                 <option value="NZ">Nouvelle-Zélande</option>
+
+                {/* Asie */}
                 <option value="JP">Japon</option>
                 <option value="CN">Chine</option>
                 <option value="IN">Inde</option>
-                <option value="BR">Brésil</option>
-                <option value="MX">Mexique</option>
-                <option value="ZA">Afrique du Sud</option>
                 <option value="SG">Singapour</option>
                 <option value="HK">Hong Kong</option>
+                <option value="KR">Corée du Sud</option>
+                <option value="TH">Thaïlande</option>
+                <option value="VN">Vietnam</option>
+                <option value="MY">Malaisie</option>
+                <option value="PH">Philippines</option>
+                <option value="PK">Pakistan</option>
+                <option value="BD">Bangladesh</option>
+
+                {/* Amérique */}
+                <option value="BR">Brésil</option>
+                <option value="MX">Mexique</option>
+                <option value="AR">Argentine</option>
+                <option value="CO">Colombie</option>
+                <option value="CL">Chili</option>
+                <option value="PE">Pérou</option>
+
+                {/* Pays Arabes */}
+                <option value="MA">Maroc</option>
+                <option value="DZ">Algérie</option>
+                <option value="TN">Tunisie</option>
+                <option value="LY">Libye</option>
+                <option value="EG">Égypte</option>
+                <option value="SA">Arabie Saoudite</option>
+                <option value="AE">Émirats Arabes Unis</option>
+                <option value="QA">Qatar</option>
+                <option value="KW">Koweït</option>
+                <option value="BH">Bahreïn</option>
+                <option value="OM">Oman</option>
+                <option value="JO">Jordanie</option>
+                <option value="LB">Liban</option>
+                <option value="IQ">Irak</option>
+                <option value="SY">Syrie</option>
+                <option value="YE">Yémen</option>
+                <option value="SD">Soudan</option>
+                <option value="MR">Mauritanie</option>
+
+                {/* Afrique */}
+                <option value="ZA">Afrique du Sud</option>
+                <option value="NG">Nigeria</option>
+                <option value="KE">Kenya</option>
+                <option value="GH">Ghana</option>
+                <option value="ET">Éthiopie</option>
+                <option value="TZ">Tanzanie</option>
+                <option value="SN">Sénégal</option>
+                <option value="CI">Côte d'Ivoire</option>
+                <option value="CM">Cameroun</option>
+                <option value="MG">Madagascar</option>
+                <option value="MU">Maurice</option>
+                <option value="RW">Rwanda</option>
               </select>
             </div>
 

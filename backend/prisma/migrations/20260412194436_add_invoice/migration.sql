@@ -6,6 +6,7 @@ CREATE TABLE "Invoice" (
     "id" TEXT NOT NULL,
     "number" TEXT NOT NULL,
     "userId" TEXT NOT NULL,
+    
     "clientId" TEXT NOT NULL,
     "total" DOUBLE PRECISION NOT NULL,
     "status" "Status" NOT NULL DEFAULT 'UNPAID',

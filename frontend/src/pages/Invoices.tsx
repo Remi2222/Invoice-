@@ -177,7 +177,7 @@ export default function Invoices() {
               {editingInvoice ? 'Modifier la facture' : 'Nouvelle facture'}
             </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Logo Section - Top Left */}
+             
               <div className="flex gap-6 mb-6">
                 <div className="flex-shrink-0">
                   <label className="block text-sm font-medium text-gray-700 mb-2">Logo</label>
@@ -205,7 +205,7 @@ export default function Invoices() {
                   />
                 </div>
 
-                {/* Other top fields */}
+                
                 <div className="flex-grow grid grid-cols-3 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">Client *</label>
