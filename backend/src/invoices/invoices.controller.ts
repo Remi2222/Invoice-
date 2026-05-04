@@ -3,7 +3,7 @@ import { InvoicesService } from './invoices.service';
 import { PdfService } from './pdf.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import type { Response } from 'express';
-
+import { PlanGuard } from '../guards/plan.guard';
 @Controller('invoices')
 @UseGuards(JwtAuthGuard)
 export class InvoicesController {
@@ -13,6 +13,7 @@ export class InvoicesController {
   ) {}
 
   @Post()
+  @UseGuards(PlanGuard)
   create(@Request() req, @Body() dto: any) {
     return this.invoicesService.create(req.user.sub, dto);
   }
