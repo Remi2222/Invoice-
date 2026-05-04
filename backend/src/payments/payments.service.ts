@@ -2,8 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { PrismaClient } from '@prisma/client';
 import { PrismaPg } from '@prisma/adapter-pg';
 import * as dotenv from 'dotenv';
-dotenv.config();
-
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config();
+}
 const adapter = new PrismaPg({
   connectionString: process.env.DATABASE_URL,
 });
@@ -12,7 +13,10 @@ const prisma = new PrismaClient({ adapter });
 
 @Injectable()
 export class PaymentsService {
-  private baseUrl = 'https://api-m.sandbox.paypal.com';
+  private baseUrl = 
+   process.env.NODE_ENV === 'production'
+    ? 'https://api-m.paypal.com'
+    : 'https://api-m.sandbox.paypal.com';
   private clientId = process.env.PAYPAL_CLIENT_ID;
   private clientSecret = process.env.PAYPAL_CLIENT_SECRET;
 
@@ -48,8 +52,8 @@ export class PaymentsService {
           description: 'Facturly Pro — Abonnement mensuel',
         }],
         application_context: {
-          return_url: 'http://localhost:5173/payment/success',
-          cancel_url: 'http://localhost:5173/payment/cancel',
+          return_url: process.env.FRONTEND_URL + '/payment/success',
+          cancel_url: process.env.FRONTEND_URL + '/payment/cancel'
         },
       }),
     });
